@@ -1,0 +1,25 @@
+{
+  "name": "mark85-cypress-api",
+  "version": "1.0.0",
+  "description": "Projeto de testes de api do mark85",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run"
+  },
+  "keywords": [
+    "cypress",
+    "api",
+    "mark85",
+    "mongodb",
+    "rabbitmq"
+  ],
+  "author": "João Tadeu S. Pereira",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.11.0",
+    "cypress-plugin-api": "^2.11.1"
+  },
+  "dependencies": {
+    "mongodb": "^6.7.0"
+  }
+}
