@@ -1,0 +1,16 @@
+{
+  "login": {
+    "name": "Manu dos anjos",
+    "email": "manudosanjos@gmail.com",
+    "password": "123qwe"
+  },
+  "senha_invalida": {
+    "email": "joaotadeu@gmail.com",
+    "password": "123qw1"
+  },
+
+  "email_404": {
+    "email": "joaaotadeu@gmail.com",
+    "password": "123qw1"
+  }
+}

@@ -2,15 +2,16 @@
 
 describe('POST /sessions', () => {
 
-    context('user /sessions', () => {
+    beforeEach(function () {
+        cy.fixture('users').then(function (users) {
+            this.users = users
+        })
+    })
 
-        it('sessao do usuario com sucesso', () => {
+    context('user /sessions', function () {
+        it('sessao do usuario com sucesso', function () {
 
-            const userDados = {
-                name: 'Manu dos anjos',
-                email: 'manudosanjos@gmail.com',
-                password: '123qwe'
-            }
+            const userDados = this.users.login
 
             cy.task('deleteUser', userDados.email)
             cy.postUser(userDados)
@@ -22,15 +23,13 @@ describe('POST /sessions', () => {
                     expect(response.body)
                     expect(token).not.to.be.empty
                     cy.log(token)
+
                 })
         })
 
-        it('sessao do usuario sem sucesso', () => {
+        it('sessao do usuario sem sucesso', function () {
 
-            const user = {
-                email: 'joaotadeu@gmail.com',
-                password: '123qw1'
-            }
+            const user = this.users.senha_invalida
 
             cy.postSession(user)
                 .then(response => {
@@ -39,12 +38,9 @@ describe('POST /sessions', () => {
 
         })
 
-        it('sessao do usuario nao encontrado', () => {
+        it('sessao do usuario nao encontrado', function () {
 
-            const user = {
-                email: 'joaaotadeu@gmail.com',
-                password: '123qw1'
-            }
+            const user = this.users.email_404
 
             cy.postSession(user)
                 .then(response => {
@@ -52,6 +48,5 @@ describe('POST /sessions', () => {
                 })
 
         })
-
     })
 })
