@@ -12,5 +12,24 @@
   "email_404": {
     "email": "joaaotadeu@gmail.com",
     "password": "123qw1"
+  },
+
+  "create_user": {
+    "name": "João Tadeu",
+    "email": "joaotadeu@gmail.com",
+    "password": "123qwe"
+  },
+
+  "create_user_duplicate": {
+    "name": "Diana anjos",
+    "email": "DianaAnjos@gmail.com",
+    "password": "123qwe"
+  },
+
+  "required": {
+    "name": "Maria José Soares Pereira",
+    "email": "mariajose@gmail.com",
+    "password": "123qwe"
+
   }
 }

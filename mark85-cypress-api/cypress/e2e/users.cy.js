@@ -2,15 +2,17 @@
 
 describe('Criação de Usuario', () => {
 
-  context('Dado que vou criar um Usuario', () => {
+  beforeEach(function () {
+    cy.fixture('users').then(function (users) {
+        this.users = users
+    })
+})
 
-    it('Quando crio um usuario com sucesso', () => {
+  context('Dado que vou criar um Usuario', function () {
 
-      const user = {
-        name: 'João Tadeu',
-        email: 'joaotadeu@gmail.com',
-        password: '123qwe'
-      }
+    it('Quando crio um usuario com sucesso', function () {
+
+      const user = this.users.create_user 
 
       cy.task('deleteUser', user.email)
 
@@ -43,15 +45,18 @@ describe('Criação de Usuario', () => {
     })
 
     context('Dado que vou criar um usuario sem campo obrigatorio' , () => {
+      let user;
 
-      it('Quando crio um usuario sem name campo obrigatorio', () => {
-
-        const user = {
+      beforeEach(() =>{
+        user = {
           name: 'Maria José Soares Pereira',
           email: 'mariajose@gmail.com',
           password: '123qwe'
         }
-  
+      })
+
+      it('Quando crio um usuario sem name campo obrigatorio', () => {
+
         cy.task('deleteUser', user.email)
   
         delete user.name
@@ -65,12 +70,6 @@ describe('Criação de Usuario', () => {
       })
   
       it('Quando crio um usuario sem email campo obrigatorio', () => {
-  
-        const user = {
-          name: 'João Pereira de Alencar',
-          email: 'JoaoP@gmail.com',
-          password: '123qwe'
-        }
         
         cy.task('deleteUser', user.email)
   
@@ -86,12 +85,6 @@ describe('Criação de Usuario', () => {
   
       it('Quando crio um usuario sem password campo obrigatorio', () => {
   
-        const user = {
-          name: 'Maria adiliane anjos',
-          email: 'maria@gmail.com',
-          password: '123qwe'
-        }
-        
         cy.task('deleteUser', user.email)
   
         delete user.password
@@ -103,8 +96,6 @@ describe('Criação de Usuario', () => {
             expect(message).to.eq('ValidationError: \"password\" is required')
           })
       })
-
     })
-
   })
 })
