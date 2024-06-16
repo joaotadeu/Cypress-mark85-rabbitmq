@@ -14,7 +14,7 @@ describe('POST /tasks', function () {
 
             const { user, task } = this.tasks.create
 
-            cy.task('deleteUser', user.email)
+            cy.task('deleteUser', user.email, user.email)
             cy.postUser(user)
 
             cy.task('deleteTask', task.name)
