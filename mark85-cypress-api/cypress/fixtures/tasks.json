@@ -1,0 +1,17 @@
+{
+    "create": {
+        "user": {
+            "name": "joao tadeu pereira",
+            "email": "joaotadeu@outlook.com",
+            "password": "123qwe"
+        },
+        "task": {
+            "name": "Pagar fatura do cartão",
+            "tags": [
+                "nubank",
+                "itau",
+                "bradesco"
+            ]
+        }
+    }
+}
