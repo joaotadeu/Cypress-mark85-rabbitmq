@@ -17,22 +17,17 @@ describe('POST /tasks', function () {
             cy.task('deleteUser', user.email, user.email)
             cy.postUser(user)
 
-            cy.task('deleteTask', task.name)
             cy.postSession(user)
                 .then(response => {
                     cy.log(response.body.token)
-                    cy.api({
-                        url: '/tasks',
-                        method: 'POST',
-                        body: task,
-                        headers: {
-                            authorization: response.body.token
-                        },
-                        failOnStatusCode: false
-                    }).then(response => {
-                        expect(response.status).to.eq(200)
-                    })
+                    
+                    cy.task('deleteTask', task.name)
+                    cy.postTask(task, response.body.token)
+                        .then(response => {
+                            expect(response.status).to.eq(200)
+                        })
                 })
         })
+
     })
 })
