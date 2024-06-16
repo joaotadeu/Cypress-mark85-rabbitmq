@@ -18,16 +18,23 @@ describe('POST /tasks', function () {
             cy.postUser(user)
 
             cy.postSession(user)
-                .then(response => {
-                    cy.log(response.body.token)
-                    
+                .then(userResponse => {
+                    cy.log(userResponse.body.token)
+
                     cy.task('deleteTask', task.name)
-                    cy.postTask(task, response.body.token)
+                    cy.postTask(task, userResponse.body.token)
                         .then(response => {
                             expect(response.status).to.eq(200)
+                            expect(response.body.name).to.eq(task.name)
+                            expect(response.body.tags).to.eql(task.tags)
+                            expect(response.body.is_done).to.be.false
+                            expect(response.body.user).to.eq(userResponse.body.user._id)
                         })
                 })
         })
 
+        it('Então crio uma tarefa sem sucesso', function () {
+
+        } )
     })
 })
