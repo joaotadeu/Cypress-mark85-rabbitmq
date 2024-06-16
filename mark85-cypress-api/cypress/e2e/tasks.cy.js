@@ -33,8 +33,25 @@ describe('POST /tasks', function () {
                 })
         })
 
-        it('Então crio uma tarefa sem sucesso', function () {
+        it('Então crio uma tarefa sem sucesso duplicada', function () {
 
-        } )
+            const { user, task, message } = this.tasks.tarefa_duplicada
+
+            cy.task('deleteUser', user.email, user.email)
+            cy.postUser(user)
+
+            cy.postSession(user)
+                .then(userResponse => {
+                    cy.log(userResponse.body.token)
+
+                    cy.task('deleteTask', task.name)
+                    cy.postTask(task, userResponse.body.token)
+                    cy.postTask(task, userResponse.body.token)
+                        .then(response => {
+                            expect(response.status).to.eq(409)
+                            expect(response.body.message).to.eql(message.error)
+                        })
+                })
+        })
     })
 })

@@ -13,5 +13,19 @@
                 "bradesco"
             ]
         }
+    },
+
+    "tarefa_duplicada": {
+        "user": {
+            "name": "tadeu pereira",
+            "email": "joaotad@outlook.com",
+            "password": "123qwe"
+        },
+        "task": {
+            "name": "Pagar fatura da internet"
+        },
+        "message": {
+            "error": "Duplicated task!"
+        }
     }
 }
