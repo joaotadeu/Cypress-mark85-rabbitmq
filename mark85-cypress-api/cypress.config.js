@@ -21,7 +21,15 @@ module.exports = defineConfig({
 
           await tasks.deleteMany({ name: taskName, user: user._id })
           return null
+        },
+
+        async deleteTaskLike(key) {
+          const tasks = db.collection('tasks')
+
+          await tasks.deleteMany({ name: { $regex: key } })
+          return null
         }
+
 
       })
     },

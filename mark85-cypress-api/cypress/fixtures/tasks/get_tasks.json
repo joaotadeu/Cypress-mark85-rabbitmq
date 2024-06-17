@@ -1,0 +1,31 @@
+{
+    "list": {
+        "user": {
+            "name": "enzo anjos",
+            "email": "enzo@outlook.com",
+            "password": "123qwe"
+        },
+        "tasks": [
+            {
+                "name": "Pag4r fatura do cartão",
+                "tags": [
+                    "nubank",
+                    "itau",
+                    "bradesco"
+                ]
+            },
+            {
+                "name": "Arrum4r um emprego",
+                "tags": [
+                    "likedin"
+                ]
+            },
+            {
+                "name": "Estud4r automação",
+                "tags": [
+                    "qax"
+                ]
+            }
+        ]
+    }
+}
