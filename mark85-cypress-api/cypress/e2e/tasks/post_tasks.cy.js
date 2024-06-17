@@ -3,7 +3,7 @@
 describe('POST /tasks', function () {
 
     beforeEach(function () {
-        cy.fixture('tasks').then(function (tasks) {
+        cy.fixture('tasks/post_tasks').then(function (tasks) {
             this.tasks = tasks
         })
     })
