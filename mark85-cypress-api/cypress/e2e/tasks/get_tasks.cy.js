@@ -9,6 +9,7 @@ describe('GET /tasks', () => {
     })
 
     context('Quando quero obter minhas tasks', function () {
+
         it('GET tasks', function () {
             const { user, tasks } = this.tasks.list
 
@@ -37,5 +38,6 @@ describe('GET /tasks', () => {
                         .and('have.length', tasks.length)
                 })
         })
+        
     })
 })
