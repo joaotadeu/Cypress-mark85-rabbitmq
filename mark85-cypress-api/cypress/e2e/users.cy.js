@@ -96,6 +96,7 @@ describe('Criação de Usuario', () => {
             expect(message).to.eq('ValidationError: \"password\" is required')
           })
       })
+      
     })
   })
 })
