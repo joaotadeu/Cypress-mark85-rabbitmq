@@ -27,5 +27,35 @@
                 ]
             }
         ]
+    },
+    "unique": {
+        "user": {
+            "name": "joao pereira de alencar",
+            "email": "joao@pereira.com",
+            "password": "123qwe"
+        },
+        "task": {
+            "name": "Tirar ferias",
+            "tags": [
+                "piaui",
+                "inss",
+                "ferias"
+            ]
+        }
+    },
+    "not_found": {
+        "user": {
+            "name": "maria jose p",
+            "email": "maria@jose.com",
+            "password": "123qwe"
+        },
+        "task": {
+            "name": "viajar para teresina",
+            "tags": [
+                "piaui",
+                "inss",
+                "ferias"
+            ]
+        }
     }
 }
