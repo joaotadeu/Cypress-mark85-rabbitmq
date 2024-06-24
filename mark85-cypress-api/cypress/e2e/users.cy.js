@@ -18,7 +18,7 @@ describe('Criação de Usuario', () => {
 
       cy.postUser(user)
         .then(response => {
-          expect(response.status).to.eq(200)
+          expect(response.status).to.eq(201)
         })
 
     })
