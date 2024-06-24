@@ -1,0 +1,61 @@
+{
+    "list": {
+        "user": {
+            "name": "enzo anjos",
+            "email": "enzo@outlook.com",
+            "password": "123qwe"
+        },
+        "tasks": [
+            {
+                "name": "Pag4r fatura",
+                "tags": [
+                    "nubank",
+                    "itau",
+                    "bradesco"
+                ]
+            },
+            {
+                "name": "Arrum4r emprego",
+                "tags": [
+                    "likedin"
+                ]
+            },
+            {
+                "name": "Estud4r automação",
+                "tags": [
+                    "qax"
+                ]
+            }
+        ]
+    },
+    "unique": {
+        "user": {
+            "name": "joao pereira de alencar",
+            "email": "joao@pereira.com",
+            "password": "123qwe"
+        },
+        "task": {
+            "name": "Tirar ferias",
+            "tags": [
+                "piaui",
+                "inss",
+                "ferias"
+            ]
+        }
+    },
+    "not_found": {
+        "user": {
+            "name": "maria  p",
+            "email": "maria@jose.com",
+            "password": "123qwe"
+        },
+        "task": {
+            "name": "viajar para ",
+            "tags": [
+                "piaui",
+                "inss",
+                "ferias"
+            ]
+        }
+    }
+}
