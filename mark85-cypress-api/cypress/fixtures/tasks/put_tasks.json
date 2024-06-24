@@ -16,12 +16,12 @@
     },
     "not_found": {
         "user": {
-            "name": "maria  p",
+            "name": "maria jose p",
             "email": "maria@jose.com",
             "password": "123qwe"
         },
         "task": {
-            "name": "viajar para ",
+            "name": "viajar para teresina",
             "tags": [
                 "piaui",
                 "inss",
