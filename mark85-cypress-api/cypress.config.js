@@ -34,6 +34,7 @@ module.exports = defineConfig({
       })
     },
     baseUrl: 'http://localhost:3333',
-    video: false
+    video: false,
+    screenshotOnRunFailure: false
   },
 });
