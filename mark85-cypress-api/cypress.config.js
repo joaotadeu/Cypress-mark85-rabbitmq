@@ -35,6 +35,11 @@ module.exports = defineConfig({
     },
     baseUrl: 'http://localhost:3333',
     video: false,
-    screenshotOnRunFailure: false
+    screenshotOnRunFailure: false,
+    env: {
+      amqpHost: 'https://woodpecker.rmq.cloudamap.com/api/queues/mbjznjwf',
+      amqpQueue: 'tasks',
+      amqpToken: 'Basic bWJqem5qd2Y6Q1IwLWpIR1pSODBWZ2]BcDUxUmNyWjFSN3JWRDdKZXE='
+    }
   },
 });

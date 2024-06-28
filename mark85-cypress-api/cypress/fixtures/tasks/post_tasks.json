@@ -6,7 +6,7 @@
             "password": "123qwe"
         },
         "task": {
-            "name": "Pagar fatura do cartão",
+            "name": "Pagar fatura do cartã",
             "tags": [
                 "nubank",
                 "itau",
